@@ -52,7 +52,11 @@ const SignIn: React.FC = () => {
         return;
       }
 
-      addToast();
+      addToast({
+        type: 'error',
+        title: 'Error na autenticação',
+        description: 'Ocorreu um erro ao fazer login, cheque as credenciais.',
+      });
     }
   },[signIn, addToast]);
 
